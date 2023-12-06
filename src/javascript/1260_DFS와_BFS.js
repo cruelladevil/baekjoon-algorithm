@@ -14,17 +14,17 @@ edges.forEach(([from, to]) => {
 });
 
 const dfs = (start) => {
-  const visited = new Set();
-  const result = [];
+  const visited = Array.from({ length: n + 1 }, () => false);
   const stack = [start];
+  const result = [];
 
   while (stack.length > 0) {
     const node = stack.pop();
 
-    if (!visited.has(node)) {
+    if (visited[node] === false) {
+      visited[node] = true;
       stack.push(...graph.get(node));
       result.push(node);
-      visited.add(node);
     }
   }
 
@@ -32,17 +32,17 @@ const dfs = (start) => {
 };
 
 const bfs = (start) => {
-  const visited = new Set();
-  const result = [];
+  const visited = Array.from({ length: n + 1 }, () => false);
   const queue = [start];
+  const result = [];
 
   while (queue.length > 0) {
     const node = queue.shift();
 
-    if (!visited.has(node)) {
+    if (visited[node] === false) {
+      visited[node] = true;
       queue.push(...graph.get(node));
       result.push(node);
-      visited.add(node);
     }
   }
 
