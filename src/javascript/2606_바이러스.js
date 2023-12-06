@@ -6,6 +6,8 @@ const input = fs
   .map((string) => string.split(' ').map(Number));
 const [[n], , ...edges] = input;
 
+const START = 1;
+
 const graph = new Map(Array.from({ length: n }, (_, i) => [i + 1, []]));
 
 edges.forEach(([from, to]) => {
@@ -14,16 +16,16 @@ edges.forEach(([from, to]) => {
 });
 
 const dfs = (start) => {
+  const visited = Array.from({ length: n + 1 }, () => false);
   const stack = [start];
-  const visited = new Set();
   const infectedComputers = [];
 
   while (stack.length > 0) {
     const node = stack.pop();
 
-    if (!visited.has(node)) {
+    if (visited[node] === false) {
+      visited[node] = true;
       stack.push(...graph.get(node));
-      visited.add(node);
       infectedComputers.push(node);
     }
   }
@@ -31,4 +33,4 @@ const dfs = (start) => {
   return infectedComputers.length - 1;
 };
 
-console.log(dfs(1));
+console.log(dfs(START));
