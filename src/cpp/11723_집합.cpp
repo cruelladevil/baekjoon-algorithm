@@ -11,14 +11,14 @@ int main() {
   const std::string ALL = "all";
   const std::string EMPTY = "empty";
 
-  int M;
+  int m;
   int val;
   int bit = 0;
   std::string action;
 
-  std::cin >> M;
+  std::cin >> m;
 
-  for (int i = 0; i < M; i += 1) {
+  for (int i = 0; i < m; i += 1) {
     std::cin >> action;
 
     if (action == ADD) {
