@@ -1,11 +1,11 @@
 #include <algorithm>
 #include <iostream>
 
-const int MAX_COL = 3;
-
 int main() {
   std::ios_base::sync_with_stdio(false);
   std::cin.tie(nullptr);
+
+  const int MAX_COL = 3;
 
   int dp_max[2][MAX_COL] = {0};
   int dp_min[2][MAX_COL] = {0};
