@@ -2,8 +2,8 @@
 
 ### Profile
 
-[![Solved.ac
-프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=cruelladevil)](https://solved.ac/cruelladevil)
+[![Solved.ac 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=cruelladevil)](https://solved.ac/profile/cruelladevil)
+[![Solved.ac 잔디](http://mazandi.herokuapp.com/api?handle=cruelladevil&theme=warm)](https://solved.ac/profile/cruelladevil)
 
 BOJ : [cruelladevil](https://www.acmicpc.net/user/cruelladevil)  
 solved.ac : [cruelladevil](https://solved.ac/profile/cruelladevil)
